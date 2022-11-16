@@ -1,0 +1,319 @@
+<html>
+<head>
+<title>UserInfo.dart</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #a9b7c6;}
+.s1 { color: #6a8759;}
+.s2 { color: #cc7832;}
+.s3 { color: #6897bb;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+UserInfo.dart</font>
+</center></td></tr></table>
+<pre><span class="s0">import </span><span class="s1">'package:flutter/material.dart'</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">'package:hexcolor/hexcolor.dart'</span><span class="s2">;</span>
+<span class="s2">var </span><span class="s0">formkey1=GlobalKey&lt;FormState&gt;()</span><span class="s2">;</span>
+
+<span class="s2">class </span><span class="s0">UserInfo </span><span class="s2">extends </span><span class="s0">StatelessWidget {</span>
+  <span class="s2">const </span><span class="s0">UserInfo({</span><span class="s2">super</span><span class="s0">.key})</span><span class="s2">;</span>
+
+
+  <span class="s0">@override</span>
+  <span class="s0">Widget build(BuildContext context) {</span>
+    <span class="s2">return </span><span class="s0">Scaffold(</span>
+      <span class="s0">appBar: AppBar(</span>
+        <span class="s0">leading:  IconButton(</span>
+          <span class="s0">color: Colors.black</span><span class="s2">,</span>
+          <span class="s0">onPressed: () {}</span><span class="s2">,</span>
+          <span class="s0">icon: Icon(</span>
+              <span class="s0">Icons.menu</span>
+          <span class="s0">)</span><span class="s2">,</span>
+        <span class="s0">)</span><span class="s2">,</span>
+        <span class="s0">actions: [</span>
+          <span class="s0">Padding(</span>
+            <span class="s0">padding: </span><span class="s2">const </span><span class="s0">EdgeInsets.only(right: </span><span class="s3">10</span><span class="s0">)</span><span class="s2">,</span>
+            <span class="s0">child: Image(</span>
+              <span class="s0">fit: BoxFit.fill</span><span class="s2">,</span>
+              <span class="s0">width: </span><span class="s3">48.0</span><span class="s2">,</span>
+              <span class="s0">height: </span><span class="s3">48.0</span><span class="s2">,</span>
+              <span class="s0">image: AssetImage(</span><span class="s1">'assets/images/image 1.png'</span><span class="s0">))</span><span class="s2">,</span>
+          <span class="s0">)</span><span class="s2">,</span>
+        <span class="s0">]</span><span class="s2">,</span>
+        <span class="s0">backgroundColor: HexColor(</span><span class="s1">'#F2F9FF'</span><span class="s0">)</span><span class="s2">,</span>
+        <span class="s0">elevation: </span><span class="s3">0.0</span><span class="s2">,</span>
+      <span class="s0">)</span><span class="s2">,</span>
+        <span class="s0">body: Container(</span>
+          <span class="s0">color: HexColor(</span><span class="s1">&quot;#F2F9FF&quot;</span><span class="s0">)</span><span class="s2">,</span>
+          <span class="s0">child: Padding(</span>
+            <span class="s0">padding: </span><span class="s2">const </span><span class="s0">EdgeInsets.all(</span><span class="s3">20</span><span class="s0">)</span><span class="s2">,</span>
+            <span class="s0">child: Container(</span>
+              <span class="s0">decoration: BoxDecoration(</span>
+                <span class="s0">borderRadius: BorderRadius.circular(</span><span class="s3">10</span><span class="s0">)</span><span class="s2">,</span>
+                <span class="s0">color: Colors.white</span><span class="s2">,</span>
+              <span class="s0">)</span><span class="s2">,</span>
+
+              <span class="s0">child: Container(</span>
+
+                <span class="s0">padding:EdgeInsets.all(</span><span class="s3">20</span><span class="s0">)</span><span class="s2">,</span>
+                <span class="s0">child: Column(</span>
+                  <span class="s0">crossAxisAlignment: CrossAxisAlignment.start</span><span class="s2">,</span>
+                  <span class="s0">children: [</span>
+                    <span class="s0">Row(</span>
+                      <span class="s0">children: [</span>
+                        <span class="s0">Container(</span>
+                          <span class="s0">width: </span><span class="s3">70.0</span><span class="s2">,</span>
+                          <span class="s0">height: </span><span class="s3">70.0</span><span class="s2">,</span>
+                          <span class="s0">color: HexColor(</span><span class="s1">&quot;#F2F9FF&quot;</span><span class="s0">)</span><span class="s2">,</span>
+                        <span class="s0">)</span><span class="s2">,</span>
+                        <span class="s0">SizedBox(</span>
+                          <span class="s0">width: </span><span class="s3">10.0</span><span class="s2">,</span>
+                        <span class="s0">)</span><span class="s2">,</span>
+                        <span class="s0">Column(</span>
+                          <span class="s0">children: [</span>
+                            <span class="s0">Text(</span><span class="s1">&quot;Name&quot;</span><span class="s0">)</span><span class="s2">,</span>
+                            <span class="s0">SizedBox(</span>
+                              <span class="s0">height: </span><span class="s3">5.0</span><span class="s2">,</span>
+                            <span class="s0">)</span><span class="s2">,</span>
+                            <span class="s0">Text(</span><span class="s1">&quot;Department&quot;</span><span class="s0">)</span><span class="s2">,</span>
+                          <span class="s0">]</span><span class="s2">,</span>
+                        <span class="s0">)</span><span class="s2">,</span>
+                        <span class="s0">Spacer()</span><span class="s2">,</span>
+                        <span class="s0">Container(</span>
+                          <span class="s0">width: </span><span class="s3">75</span><span class="s2">,</span>
+                          <span class="s0">child: MaterialButton(</span>
+                            <span class="s0">shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(</span><span class="s3">20</span><span class="s0">))</span>
+                            <span class="s2">,</span><span class="s0">color: HexColor(</span><span class="s1">'#3D7DCA'</span><span class="s0">)</span><span class="s2">,</span>
+                            <span class="s0">onPressed: (){</span>
+                            <span class="s0">}</span><span class="s2">,</span>
+                            <span class="s0">child: Text(</span>
+                              <span class="s1">&quot;العربية&quot;</span><span class="s2">,</span><span class="s0">style: TextStyle(</span>
+                              <span class="s0">color: Colors.white</span><span class="s2">,</span>
+                              <span class="s0">fontSize: </span><span class="s3">15.0</span><span class="s2">,</span>
+                            <span class="s0">)</span><span class="s2">,</span>
+                            <span class="s0">)</span><span class="s2">,</span><span class="s0">)</span><span class="s2">,</span>
+                        <span class="s0">)</span><span class="s2">,</span>
+
+                      <span class="s0">]</span><span class="s2">,</span>
+                    <span class="s0">)</span><span class="s2">,</span>
+                    <span class="s0">SizedBox(</span>
+                      <span class="s0">height: </span><span class="s3">20.0</span><span class="s2">,</span>
+                    <span class="s0">)</span><span class="s2">,</span>
+                    <span class="s0">Text(</span>
+                        <span class="s1">'Personal Data'</span><span class="s2">,</span>
+                    <span class="s0">style: TextStyle(</span>
+                      <span class="s0">fontSize: </span><span class="s3">15.0</span><span class="s2">,</span>
+                      <span class="s0">fontWeight: FontWeight.w400</span>
+                    <span class="s0">)</span><span class="s2">,</span>
+                    <span class="s0">)</span><span class="s2">,</span>
+                    <span class="s0">SizedBox(</span>
+                      <span class="s0">height: </span><span class="s3">15.0</span><span class="s2">,</span>
+                    <span class="s0">)</span><span class="s2">,</span>
+                    <span class="s0">Container(</span>
+                      <span class="s0">width: double.infinity</span><span class="s2">,</span>
+                      <span class="s0">height: </span><span class="s3">1</span><span class="s2">,</span>
+                      <span class="s0">color: HexColor(</span><span class="s1">&quot;#BDC0C9&quot;</span><span class="s0">)</span><span class="s2">,</span>
+                    <span class="s0">)</span><span class="s2">,</span>
+                    <span class="s0">SizedBox(</span>
+                      <span class="s0">height: </span><span class="s3">15.0</span><span class="s2">,</span>
+                    <span class="s0">)</span><span class="s2">,</span>
+                    <span class="s0">Text(</span>
+                      <span class="s1">'Full name'</span><span class="s2">,</span>
+                      <span class="s0">style: TextStyle(</span>
+                          <span class="s0">fontSize: </span><span class="s3">12.0</span><span class="s2">,</span>
+                          <span class="s0">fontWeight: FontWeight.w400</span>
+                      <span class="s0">)</span><span class="s2">,</span>
+                    <span class="s0">)</span><span class="s2">,</span>
+                    <span class="s0">SizedBox(</span>
+                      <span class="s0">height: </span><span class="s3">15.0</span><span class="s2">,</span>
+                    <span class="s0">)</span><span class="s2">,</span>
+                    <span class="s0">Text(</span>
+                      <span class="s1">'Nationality'</span><span class="s2">,</span>
+                      <span class="s0">style: TextStyle(</span>
+                          <span class="s0">fontSize: </span><span class="s3">12.0</span><span class="s2">,</span>
+                          <span class="s0">fontWeight: FontWeight.w400</span>
+                      <span class="s0">)</span><span class="s2">,</span>
+                    <span class="s0">)</span><span class="s2">,</span>
+                    <span class="s0">SizedBox(</span>
+                      <span class="s0">height: </span><span class="s3">15.0</span><span class="s2">,</span>
+                    <span class="s0">)</span><span class="s2">,</span>
+                    <span class="s0">Text(</span>
+                      <span class="s1">'Gender'</span><span class="s2">,</span>
+                      <span class="s0">style: TextStyle(</span>
+                          <span class="s0">fontSize: </span><span class="s3">12.0</span><span class="s2">,</span>
+                          <span class="s0">fontWeight: FontWeight.w400</span>
+                      <span class="s0">)</span><span class="s2">,</span>
+                    <span class="s0">)</span><span class="s2">,</span>
+                    <span class="s0">SizedBox(</span>
+                      <span class="s0">height: </span><span class="s3">15.0</span><span class="s2">,</span>
+                    <span class="s0">)</span><span class="s2">,</span>
+                    <span class="s0">Text(</span>
+                      <span class="s1">'Religion'</span><span class="s2">,</span>
+                      <span class="s0">style: TextStyle(</span>
+                          <span class="s0">fontSize: </span><span class="s3">12.0</span><span class="s2">,</span>
+                          <span class="s0">fontWeight: FontWeight.w400</span>
+                      <span class="s0">)</span><span class="s2">,</span>
+                    <span class="s0">)</span><span class="s2">,</span>
+                    <span class="s0">SizedBox(</span>
+                      <span class="s0">height: </span><span class="s3">15.0</span><span class="s2">,</span>
+                    <span class="s0">)</span><span class="s2">,</span>
+                    <span class="s0">Text(</span>
+                      <span class="s1">'Date Of Birth'</span><span class="s2">,</span>
+                      <span class="s0">style: TextStyle(</span>
+                          <span class="s0">fontSize: </span><span class="s3">12.0</span><span class="s2">,</span>
+                          <span class="s0">fontWeight: FontWeight.w400</span>
+                      <span class="s0">)</span><span class="s2">,</span>
+                    <span class="s0">)</span><span class="s2">,</span>
+                    <span class="s0">SizedBox(</span>
+                      <span class="s0">height: </span><span class="s3">15.0</span><span class="s2">,</span>
+                    <span class="s0">)</span><span class="s2">,</span>
+                    <span class="s0">Text(</span>
+                      <span class="s1">'ID/Passport'</span><span class="s2">,</span>
+                      <span class="s0">style: TextStyle(</span>
+                          <span class="s0">fontSize: </span><span class="s3">12.0</span><span class="s2">,</span>
+                          <span class="s0">fontWeight: FontWeight.w400</span>
+                      <span class="s0">)</span><span class="s2">,</span>
+                    <span class="s0">)</span><span class="s2">,</span>
+                    <span class="s0">SizedBox(</span>
+                      <span class="s0">height: </span><span class="s3">20.0</span><span class="s2">,</span>
+                    <span class="s0">)</span><span class="s2">,</span>
+                    <span class="s0">Text(</span>
+                      <span class="s1">'Contact Data'</span><span class="s2">,</span>
+                      <span class="s0">style: TextStyle(</span>
+                          <span class="s0">fontSize: </span><span class="s3">15.0</span><span class="s2">,</span>
+                          <span class="s0">fontWeight: FontWeight.w400</span>
+                      <span class="s0">)</span><span class="s2">,</span>
+                    <span class="s0">)</span><span class="s2">,</span>
+                    <span class="s0">SizedBox(</span>
+                      <span class="s0">height: </span><span class="s3">15.0</span><span class="s2">,</span>
+                    <span class="s0">)</span><span class="s2">,</span>
+                    <span class="s0">Container(</span>
+                      <span class="s0">width: double.infinity</span><span class="s2">,</span>
+                      <span class="s0">height: </span><span class="s3">1</span><span class="s2">,</span>
+                      <span class="s0">color: HexColor(</span><span class="s1">&quot;#BDC0C9&quot;</span><span class="s0">)</span><span class="s2">,</span>
+                    <span class="s0">)</span><span class="s2">,</span>
+                    <span class="s0">SizedBox(</span>
+                      <span class="s0">height: </span><span class="s3">15.0</span><span class="s2">,</span>
+                    <span class="s0">)</span><span class="s2">,</span>
+                    <span class="s0">Text(</span>
+                      <span class="s1">'City'</span><span class="s2">,</span>
+                      <span class="s0">style: TextStyle(</span>
+                          <span class="s0">fontSize: </span><span class="s3">12.0</span><span class="s2">,</span>
+                          <span class="s0">fontWeight: FontWeight.w400</span>
+                      <span class="s0">)</span><span class="s2">,</span>
+                    <span class="s0">)</span><span class="s2">,</span>
+                    <span class="s0">SizedBox(</span>
+                      <span class="s0">height: </span><span class="s3">15.0</span><span class="s2">,</span>
+                    <span class="s0">)</span><span class="s2">,</span>
+                    <span class="s0">Text(</span>
+                      <span class="s1">'Address'</span><span class="s2">,</span>
+                      <span class="s0">style: TextStyle(</span>
+                          <span class="s0">fontSize: </span><span class="s3">12.0</span><span class="s2">,</span>
+                          <span class="s0">fontWeight: FontWeight.w400</span>
+                      <span class="s0">)</span><span class="s2">,</span>
+                    <span class="s0">)</span><span class="s2">,</span>
+                    <span class="s0">SizedBox(</span>
+                      <span class="s0">height: </span><span class="s3">15.0</span><span class="s2">,</span>
+                    <span class="s0">)</span><span class="s2">,</span>
+                    <span class="s0">Text(</span>
+                      <span class="s1">'Phone Number'</span><span class="s2">,</span>
+                      <span class="s0">style: TextStyle(</span>
+                          <span class="s0">fontSize: </span><span class="s3">12.0</span><span class="s2">,</span>
+                          <span class="s0">fontWeight: FontWeight.w400</span>
+                      <span class="s0">)</span><span class="s2">,</span>
+                    <span class="s0">)</span><span class="s2">,</span>
+                    <span class="s0">SizedBox(</span>
+                      <span class="s0">height: </span><span class="s3">15.0</span><span class="s2">,</span>
+                    <span class="s0">)</span><span class="s2">,</span>
+                    <span class="s0">Text(</span>
+                      <span class="s1">'Email'</span><span class="s2">,</span>
+                      <span class="s0">style: TextStyle(</span>
+                          <span class="s0">fontSize: </span><span class="s3">12.0</span><span class="s2">,</span>
+                          <span class="s0">fontWeight: FontWeight.w400</span>
+                      <span class="s0">)</span><span class="s2">,</span>
+                    <span class="s0">)</span><span class="s2">,</span>
+                    <span class="s0">SizedBox(</span>
+                      <span class="s0">height: </span><span class="s3">15.0</span><span class="s2">,</span>
+                    <span class="s0">)</span><span class="s2">,</span>
+                    <span class="s0">Text(</span>
+                      <span class="s1">'Previous Qualification'</span><span class="s2">,</span>
+                      <span class="s0">style: TextStyle(</span>
+                          <span class="s0">fontSize: </span><span class="s3">15.0</span><span class="s2">,</span>
+                          <span class="s0">fontWeight: FontWeight.w400</span>
+                      <span class="s0">)</span><span class="s2">,</span>
+                    <span class="s0">)</span><span class="s2">,</span>
+                    <span class="s0">SizedBox(</span>
+                      <span class="s0">height: </span><span class="s3">15.0</span><span class="s2">,</span>
+                    <span class="s0">)</span><span class="s2">,</span>
+                    <span class="s0">Container(</span>
+                      <span class="s0">width: double.infinity</span><span class="s2">,</span>
+                      <span class="s0">height: </span><span class="s3">1</span><span class="s2">,</span>
+                      <span class="s0">color: HexColor(</span><span class="s1">&quot;#BDC0C9&quot;</span><span class="s0">)</span><span class="s2">,</span>
+                    <span class="s0">)</span><span class="s2">,</span>
+                    <span class="s0">SizedBox(</span>
+                      <span class="s0">height: </span><span class="s3">15.0</span><span class="s2">,</span>
+                    <span class="s0">)</span><span class="s2">,</span>
+                    <span class="s0">Text(</span>
+                      <span class="s1">'School'</span><span class="s2">,</span>
+                      <span class="s0">style: TextStyle(</span>
+                          <span class="s0">fontSize: </span><span class="s3">12.0</span><span class="s2">,</span>
+                          <span class="s0">fontWeight: FontWeight.w400</span>
+                      <span class="s0">)</span><span class="s2">,</span>
+                    <span class="s0">)</span><span class="s2">,</span>
+                    <span class="s0">SizedBox(</span>
+                      <span class="s0">height: </span><span class="s3">15.0</span><span class="s2">,</span>
+                    <span class="s0">)</span><span class="s2">,</span>
+                    <span class="s0">Text(</span>
+                      <span class="s1">'Qualification'</span><span class="s2">,</span>
+                      <span class="s0">style: TextStyle(</span>
+                          <span class="s0">fontSize: </span><span class="s3">12.0</span><span class="s2">,</span>
+                          <span class="s0">fontWeight: FontWeight.w400</span>
+                      <span class="s0">)</span><span class="s2">,</span>
+                    <span class="s0">)</span><span class="s2">,</span>
+                    <span class="s0">SizedBox(</span>
+                      <span class="s0">height: </span><span class="s3">15.0</span><span class="s2">,</span>
+                    <span class="s0">)</span><span class="s2">,</span>
+                    <span class="s0">Text(</span>
+                      <span class="s1">'Grades'</span><span class="s2">,</span>
+                      <span class="s0">style: TextStyle(</span>
+                          <span class="s0">fontSize: </span><span class="s3">12.0</span><span class="s2">,</span>
+                          <span class="s0">fontWeight: FontWeight.w400</span>
+                      <span class="s0">)</span><span class="s2">,</span>
+                    <span class="s0">)</span><span class="s2">,</span>
+                    <span class="s0">SizedBox(</span>
+                      <span class="s0">height: </span><span class="s3">15.0</span><span class="s2">,</span>
+                    <span class="s0">)</span><span class="s2">,</span>
+                    <span class="s0">Text(</span>
+                      <span class="s1">'Seat Number'</span><span class="s2">,</span>
+                      <span class="s0">style: TextStyle(</span>
+                          <span class="s0">fontSize: </span><span class="s3">12.0</span><span class="s2">,</span>
+                          <span class="s0">fontWeight: FontWeight.w400</span>
+                      <span class="s0">)</span><span class="s2">,</span>
+                    <span class="s0">)</span><span class="s2">,</span>
+                    <span class="s0">SizedBox(</span>
+                      <span class="s0">height: </span><span class="s3">15.0</span><span class="s2">,</span>
+                    <span class="s0">)</span><span class="s2">,</span>
+                    <span class="s0">Text(</span>
+                      <span class="s1">'Wanted Speciality'</span><span class="s2">,</span>
+                      <span class="s0">style: TextStyle(</span>
+                          <span class="s0">fontSize: </span><span class="s3">12.0</span><span class="s2">,</span>
+                          <span class="s0">fontWeight: FontWeight.w400</span>
+                      <span class="s0">)</span><span class="s2">,</span>
+                    <span class="s0">)</span><span class="s2">,</span>
+                  <span class="s0">]</span><span class="s2">,</span>
+                <span class="s0">)</span><span class="s2">,</span>
+              <span class="s0">)</span><span class="s2">,</span>
+            <span class="s0">)</span><span class="s2">,</span>
+          <span class="s0">)</span><span class="s2">,</span>
+        <span class="s0">)</span><span class="s2">,</span>
+      <span class="s0">)</span><span class="s2">;</span>
+
+  <span class="s0">}</span>
+<span class="s0">}</span>
+</pre>
+</body>
+</html>
